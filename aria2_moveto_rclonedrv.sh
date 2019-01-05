@@ -1,7 +1,7 @@
 ﻿#!/bin/bash
 
 # rclone链接的网盘的名称，也就是rclone config显示的Name那一列
-rcloneDrive='eduGdrv'                 
+rcloneDrive='oneDrv'                 
 # aria2下载目录，也就是aria2的dir配置项的值
 downloadPath='/usr/local/caddy/www/aria2/download'  
 
@@ -41,7 +41,7 @@ else    #多个文件，一般是BT下载的情况
       #eg: rclone move /downloadPath/bt eduGdrv:bt
       su - -c "rclone move \"$filePath\" $rcloneDrive:\"$basenameStr\""
 	  
-      rm -r -f "$filePath"                           #删除VPS上残留的目录
+      rmdir "$filePath"                           #删除VPS上残留的目录
    
       exit 0
     elif [ "$dirnameStr" = "/" ]; then              #脚本出问题了，剥到根目录了，还没匹配到aria2下载目录
