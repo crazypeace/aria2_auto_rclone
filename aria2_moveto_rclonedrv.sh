@@ -3,7 +3,7 @@
 # rclone链接的网盘的名称，也就是rclone config显示的Name那一列
 rcloneDrive='gdrv'                 
 # aria2下载目录，也就是aria2的dir配置项的值
-downloadPath='/usr/local/caddy/www/aria2/download'  
+downloadPath='/usr/local/caddy/www/aria2/Download'  
 
 # Aria2传给这个脚本的参数 
 # $1是一个序列号，一般没有实际用处
